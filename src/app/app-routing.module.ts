@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import {RouterModule,Routes} from "@angular/router";
 
-import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
+import {ProjectsComponent} from "./components/projects/projects.component";
 
 
 const routes: Routes = [
-  {path: '',component: NavBarComponent},
-
-
+  {path: '',component: ProjectsComponent},
 ]
 
 @NgModule({
