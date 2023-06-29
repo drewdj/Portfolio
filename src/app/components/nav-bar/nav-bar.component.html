@@ -1,1 +1,16 @@
-<p>nav-bar works!</p>
+<div class="navbar absolute">
+  <div class="navbar-start">
+    <a class="btn btn-ghost normal-case text-xl text-gold">DAVID JIMÉNEZ MONTERRUBIO</a>
+  </div>
+
+  <div class="navbar-center space-x-5">
+    <button class="btn rounded-full border-2 border-gold text-gold" routerLink="">Projects</button>
+    <button class="btn rounded-full border-2 border-gold text-gold" routerLink="about">About</button>
+    <button class="btn rounded-full border-2 border-gold text-gold" routerLink="contact">Contact</button>
+  </div>
+
+</div>
+
+<div class="flex items-center justify-center w-full h-screen border">
+  <router-outlet></router-outlet>
+</div>
