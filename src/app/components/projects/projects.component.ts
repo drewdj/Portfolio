@@ -11,7 +11,6 @@ import {PROJECTS} from "./project-data";
 export class ProjectsComponent {
   projects: Project[] = PROJECTS;
   selectedProject: Project = this.projects[0];
-  test: string = "assets/images/PlumVR/plumvr1.jpg";
 
   selectProject(project: Project) {
     this.selectedProject = project;
