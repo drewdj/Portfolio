@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { ProjectCarouselComponent } from './components/project-carousel/project-carousel.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import { AboutComponent } from './components/about/about.component';
     NavBarComponent,
     ProjectsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    ImageCarouselComponent,
+    ProjectCarouselComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgOptimizedImage,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

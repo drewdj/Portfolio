@@ -1,24 +1,30 @@
 <div class="flex justify-center items-center h-screen">
-  <div class="bg-white shadow-xl shadow-yellow-400 rounded w-2/3 h-3/4 grid grid-cols-2 gap-4">
-    <div class="grid grid-rows-4 bg-green-950 gap-8">
-      <div class="p-6 flex justify-center bg-neutral rounded-box">
-        <h1 class="text-2xl font-semibold">Project Name</h1>
-      </div>
-      <div class="p-6 flex justify-center bg-neutral rounded-box">
-        <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non metus ac lorem pulvinar volutpat.</p>
-      </div>
-      <div class="p-6 flex justify-center bg-neutral rounded-box">
-
-      </div>
-      <div class="p-6 flex justify-center bg-neutral rounded-box">
-        <p class="text-base">Aquí va la información adicional del proyecto. Podría incluir detalles técnicos, estadísticas, etc.</p>
-      </div>
+  <div>
+    <div class="tabs">
+      <!-- Aquí iteramos sobre cada proyecto y creamos una pestaña para cada uno -->
+      <a *ngFor="let project of projects"
+         class="tab tab-lg tab-lifted"
+         [class.tab-active]="project === selectedProject"
+         (click)="selectProject(project)">
+        {{ project.name }}
+      </a>
     </div>
-    <div class="p-6 flex justify-center bg-neutral rounded-box">
-
-      <img class="object-contain" src="assets/images/test.jpg" alt="Imagen principal del proyecto">
-    </div>
-    <div class="p-6 col-span-full flex justify-center bg-neutral rounded-box">
+    <div class="bg-black container mx-auto grid grid-cols-2 gap-4 shadow-xl shadow-white border">
+      <div class="grid grid-rows-4 gap-4">
+        <div class="p-6 flex justify-center">
+          <h1 class="text-2xl font-semibold">{{ selectedProject.name }}</h1>
+        </div>
+        <div class="p-6 flex justify-center">
+          <p class="text-base">{{ selectedProject.description }}</p>
+        </div>
+        <app-image-carousel class="flex justify-center" [images]="selectedProject.images" (selectedImageChange)="selectedProject.mainImage = $event"></app-image-carousel>
+        <div class="p-6 flex justify-center m-4 border-l-4 border-gold-700">
+          <p class="text-base">{{ selectedProject.additionalInfo }}</p>
+        </div>
+      </div>
+      <div class="p-6 m-6 flex container mx-auto justify-center border-r-4 border border-gold-700 ">
+        <img class="object-contain h-full w-full" [src]="selectedProject.mainImage" alt="Imagen principal del proyecto">
+      </div>
 
     </div>
   </div>
