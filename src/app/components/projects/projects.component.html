@@ -1,0 +1,37 @@
+<!--
+<div class=" lg:h-screen  p-8">
+  <div class="grid lg:grid-cols-2 gap-8 justify-items-center items-center h-full outline outline-offset-8 p-4">
+
+    <div class="row-span-1 h-full w-full">
+      <app-nav-bar></app-nav-bar>
+    </div>
+
+    <div class="row-span-3 w-full bg-base-300 border-8 border-black shadow-lg shadow-black h-full relative grid justify-items-center items-center">
+      <img class="absolute h-full w-11/12 object-contain" [src]="selectedProject.mainImage" alt="Main Image">
+      <div class="pb-[56.25%]"></div>
+    </div>
+
+    <div class="row-span-2 h-full w-full grid gap-8">
+      <div class="text-5xl font-bold mt-8 text-center">{{selectedProject.name}}</div>
+      <div class="text-lg lg:text-xl xl:text-2xl px-6 mb-8">{{selectedProject.description}}</div>
+    </div>
+
+    <div class="grid invisible absolute lg:visible lg:static  justify-items-center items-center p-6 overflow-hidden bg-base-300 border-x-2 border-black" >
+      <app-image-carousel [images]="selectedProject.images" (selectedImageChange)="selectedProject.mainImage = $event"></app-image-carousel>
+    </div>
+
+    <div class="grid justify-items-center items-center ">
+      <div class="h-full w-full text-2xl font-bold">DATOS DEL PROYECTO</div>
+      <div class="text-lg mt-4 max-h-40   overflow-auto">
+        <div><strong>Fecha de inicio:</strong> {{selectedProject.startDate}}</div>
+        <div><strong>Fecha de finalización:</strong> {{selectedProject.endDate}}</div>
+        <div><strong>Tecnologías utilizadas:</strong> {{selectedProject.technologies}}</div>
+        <div><strong>Funcionalidades destacadas:</strong> {{selectedProject.featureHighlights}}</div>
+        <div><strong>Roles y contribuciones:</strong> {{selectedProject.contributions}}</div>
+        <div><strong>Resultados y logros:</strong> {{selectedProject.results}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+-->
