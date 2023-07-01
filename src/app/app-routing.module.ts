@@ -4,12 +4,16 @@ import {RouterModule,Routes} from "@angular/router";
 import {ProjectsComponent} from "./components/projects/projects.component";
 import {AboutComponent} from "./components/about/about.component";
 import {ContactComponent} from "./components/contact/contact.component";
+import {LandingComponent} from "./components/landing/landing.component";
 
 
 const routes: Routes = [
-  {path: '',component: ProjectsComponent},
+  {path: '',component: LandingComponent},
+  {path: 'projects',component: ProjectsComponent},
   {path: 'about',component: AboutComponent},
   {path: 'contact',component: ContactComponent},
+
+
 ]
 
 @NgModule({
